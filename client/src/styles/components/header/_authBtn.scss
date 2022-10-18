@@ -1,0 +1,35 @@
+.auth-btn {
+  display: flex;
+
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+
+  .btn-login {
+    padding: 6px 12px;
+
+    font-family: "EudoxusSans-Light";
+    color: #fff;
+    background: none;
+    border: {
+      width: 1px;
+      style: solid;
+      radius: 41px;
+      image-source: -webkit-linear-gradient(
+                      to right,
+                      #b20a2c,
+                      #fff5a0
+      );
+      image-source: linear-gradient(
+                      130deg,
+                      rgba(254, 229, 166, 1),
+                      rgba(253, 176, 146, 1),
+                      rgb(199, 36, 36),
+                      rgb(219, 61, 40)
+      );
+      image-slice: 1;
+    }
+  }
+}

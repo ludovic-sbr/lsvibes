@@ -1,0 +1,20 @@
+{
+  "short_name": "LS Vibes website",
+  "name": "LS Vibes website",
+  "description": "Los Santos Vibes, roleplay écrit sur GTA V.",
+  
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+
+  "start_url": "https://lsvibes.fr/",
+  "display": "standalone",
+
+  "lang": "fr-FR",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

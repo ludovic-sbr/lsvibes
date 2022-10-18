@@ -1,0 +1,44 @@
+.account-confirmation {
+  height: 100vh; width: 100%;
+
+  position: relative;
+  margin: 0; padding: 0;
+
+  overflow: hidden;
+  animation: 1s ease both running load;
+
+  .top-side {
+    height: 60%; width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    h1 {
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: "EudoxusSans-Bold";
+    }
+
+    p {
+      color: rgba(136, 136, 136, 1);
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+
+  .bottom-side {
+    height: 40%; width: 100%;
+
+    position: relative;
+    background: {
+      image: url('../../../assets/images/login_bg.svg');
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
+  }
+}

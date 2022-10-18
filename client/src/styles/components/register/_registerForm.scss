@@ -1,0 +1,76 @@
+.registerForm {
+  width: 284px; height: auto;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .chart {
+    height: 45px; width: 100%;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+
+    border: 0.649652px solid #595959;
+
+    input {
+      width: 65%;
+
+      margin-left: 20px;
+
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #595959;
+      font-size: 14px;
+    }
+
+    img {
+      position: absolute;
+      right: 10px;
+    }
+  }
+
+  .error-msg {
+    width: 100%;
+    position: relative;
+    margin-top: -5px; padding: 0;
+    margin-bottom: 10px;
+    display: block;
+
+    font-size: 11px;
+    color: #ED8282;
+    text-align: justify;
+  }
+
+  .error {
+    border: 0.649652px solid #ED8282;
+  }
+
+  .form-check {
+    margin-top: 10px;
+
+    font-size: 14px;
+  }
+
+  span {
+    width: 100%;
+
+    margin-top: 20px;
+    position: relative;
+
+    text-align: justify;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(155, 0, 0);
+  }
+
+  button {
+    width: 100%;
+
+    margin-top: 30px;
+  }
+}

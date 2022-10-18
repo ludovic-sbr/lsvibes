@@ -1,0 +1,68 @@
+body {
+    margin: 0; padding: 0;
+}
+
+
+html, body {
+	@extend %website-bg;
+
+	overflow-x: hidden;
+
+	font-family: $MainFont;
+
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.submit {
+	height: 50px;
+
+	background: linear-gradient(223.14deg, #7B7B7B -107.72%, #0B0B0B 109.08%);
+	border: none;
+	border-radius: 0;
+	font-size: 14px;
+	outline: none;
+
+	&:hover {
+		@include bgGradient($BtnBg);
+	}
+
+	.btn-animation {
+		max-height: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+	}
+}
+
+.nav-link {
+	&:hover {
+		color: #fff;
+	}
+}
+
+.active {
+	color: #fff;
+}
+
+.edito {
+	background: linear-gradient(232.33deg, #E6648D 0%, #B9413A 36.63%, #FEE5A6 79.44%, rgba(0, 0, 0, 0.23) 93.77%);
+
+	background: -webkit-linear-gradient(232.33deg, #E6648D 0%, #B9413A 36.63%, #FEE5A6 79.44%, rgba(0, 0, 0, 0.23) 93.77%);
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@keyframes load {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

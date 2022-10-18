@@ -1,0 +1,33 @@
+<svg width="594" height="366" viewBox="0 0 594 366" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_f)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M281.189 294.092C231.898 285.373 180.443 277.285 138.187 256.661C90.7463 233.507 47.8818 203.696 37.5376 175.175C27.2258 146.742 55.163 126.047 84.6506 109.049C111.125 93.7878 154.256 90.5052 194.808 84.5162C240.879 77.7123 282.374 54.7198 337.137 71.7608C393.353 89.2539 392.269 130.327 432.331 158.428C468.361 183.701 542.985 198.435 556.335 225.515C569.578 252.378 521.692 264.744 492.031 279.524C467.521 291.737 438.129 300.499 400.656 303.088C363.695 305.642 323.19 301.522 281.189 294.092Z" stroke="url(#paint0_linear)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M281.189 294.092C231.898 285.373 180.443 277.285 138.187 256.661C90.7463 233.507 47.8818 203.696 37.5376 175.175C27.2258 146.742 55.163 126.047 84.6506 109.049C111.125 93.7878 154.256 90.5052 194.808 84.5162C240.879 77.7123 282.374 54.7198 337.137 71.7608C393.353 89.2539 392.269 130.327 432.331 158.428C468.361 183.701 542.985 198.435 556.335 225.515C569.578 252.378 521.692 264.744 492.031 279.524C467.521 291.737 438.129 300.499 400.656 303.088C363.695 305.642 323.19 301.522 281.189 294.092Z" stroke="url(#paint1_linear)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <defs>
+        <filter id="filter0_f" x="0.344727" y="30.5994" width="593.255" height="308.247" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="14" result="effect1_foregroundBlur"/>
+        </filter>
+        <linearGradient id="paint0_linear" x1="547.648" y1="279.899" x2="33.0568" y2="-14.812">
+            <animate attributeName="x1" values="0;0;1;1;0" keyTimes="0;.25;.5;.75;1" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="y1" values="0;1;1;0;0" keyTimes="0;.25;.5;.75;1" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="x2" values="1;1;0;0;1" keyTimes="0;.25;.5;.75;1" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="1;0;0;1;1" keyTimes="0;.25;.5;.75;1" dur="4s" repeatCount="indefinite" />
+            <stop offset="0%" stop-color="#FEE5A6"/>
+            <stop offset="33%" stop-color="#FDB092"/>
+            <stop offset="66%" stop-color="#F92A2A"/>
+            <stop offset="100%" stop-color="#FC80B8"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear" x1="547.648" y1="279.899" x2="33.0568" y2="-14.812">
+            <animate attributeName="x1" values="0;0;1;1;0" keyTimes="0;.25;.5;.75;1" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="y1" values="0;1;1;0;0" keyTimes="0;.25;.5;.75;1" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="x2" values="1;1;0;0;1" keyTimes="0;.25;.5;.75;1" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="y2" values="1;0;0;1;1" keyTimes="0;.25;.5;.75;1" dur="4s" repeatCount="indefinite" />
+            <stop offset="0%" stop-color="#FEE5A6"/>
+            <stop offset="33%" stop-color="#FDB092"/>
+            <stop offset="66%" stop-color="#F92A2A"/>
+            <stop offset="100%" stop-color="#FC80B8"/>
+        </linearGradient>
+    </defs>
+</svg>

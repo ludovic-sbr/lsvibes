@@ -1,0 +1,67 @@
+.preloader {
+  height: 100%;
+  width: 100%;
+
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 0; left: 0; bottom: 0; right: 0;
+
+  overflow: hidden;
+  background: rgba(11, 11, 11, 1);
+  z-index: 9998;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+
+  img {
+    height: 100px;
+  }
+
+  p {
+    margin-bottom: 25px;
+
+    color: rgb(184, 184, 184);
+    font-size: 12px;
+    font-family: 'EudoxusSans-Regular';
+  }
+
+  .pbar {
+    width: 300px;
+    height: 5px;
+
+    border-radius: 30px;
+    background: rgb(37, 37, 37);
+
+    .inner {
+      width: 0%; height: 100%;
+
+      background: linear-gradient(97.11deg, #ffd05b 3.94%, #ff8352 36.84%, rgb(252, 40, 40) 74.25%, #ff5ba5 108.01%);
+      transition: all 1.5s .5s ease-in-out;
+    }
+
+  }
+}
+
+.showed {
+  display: flex;
+  opacity: 1;
+
+  .pbar {
+    .inner {
+      width: 100%;
+
+      animation: 1.5s ease-in-out 0.5s both running progress;
+    }
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%
+  }
+}

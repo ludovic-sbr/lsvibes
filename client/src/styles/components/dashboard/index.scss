@@ -1,0 +1,107 @@
+@import "informations";
+@import "whitelist";
+@import "password";
+
+.dashboard {
+  height: 100vh; width: 100%;
+
+  overflow: hidden;
+  animation: 1s ease both running load;
+
+  .panel {
+    margin: auto;
+    padding: 0;
+
+    color: #fff;
+
+    .panel-header {
+      width: 100%;
+
+      position: relative;
+      margin-bottom: 15px;
+
+      .user {
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+
+        background: #1B1B1B;
+        font-size: 22px;
+        font-family: "EudoxusSans-Light";
+        font-weight: 300;
+      }
+
+      .title {
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        padding: 30px 0 30px 20px;
+
+        font-family: "EudoxusSans-Regular";
+        font-size: 30px;
+        background: #1B1B1B;
+      }
+    }
+
+    .section {
+      width: 100%;
+
+      position: relative;
+
+      .menu {
+        height: 100%;
+
+        .panel-btn {
+          width: 100%; height: 50px;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 5px;
+          position: relative;
+          padding: 0 20px 0 20px;
+
+          background: #1B1B1B;
+          border: none;
+          color: #fff;
+          outline: none;
+
+          span {
+            width: 75%;
+
+            text-align: left;
+          }
+
+          &:hover {
+            background: #373737;
+          }
+        }
+
+        .active {
+          background: #373737;
+          border: {
+            width: 4px;
+            style: solid;
+            image: -webkit-linear-gradient(222.93deg, #FA00FF -73.65%, #F92A2A 44.08%, #FFF624 137.93%, #FFFFFF 203.22%);
+            image: linear-gradient(175.93deg, #FA00FF -73.65%, #F92A2A 44.08%, #FFF624 137.93%, #FFFFFF 203.22%);
+            image-slice: 1;
+            right: none;
+            top: none;
+            bottom: none;
+          }
+        }
+      }
+
+      .content {
+        height: 300px;
+
+        position: relative;
+
+        overflow: hidden;
+      }
+    }
+  }
+}

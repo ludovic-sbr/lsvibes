@@ -1,0 +1,210 @@
+.section-welcome {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  background-image: url("../../../assets/images/bgd.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .title {
+    margin: 0; padding: 0;
+
+    h1 {
+      line-height: 1;
+      font-size: 60px;
+      color: #fff;
+      font-family: "EudoxusSans-Bold";
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+  }
+
+  .traced {
+    position: absolute;
+    margin-top: -40px; margin-left: -30px;
+  }
+
+  .btn-discord {
+    width: 110px; height: 50px;
+    border-radius: 25px;
+    @include bgGradient ($BtnBg);
+
+    position: relative;
+    left: 50px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    @include transition ($MainTransitionR);
+
+    &:hover {
+      width: 250px;
+
+      .arrow {
+        @include transform (rotate(90deg));
+      }
+
+      .content {
+        opacity: 1;
+      }
+    }
+
+    .logo {
+      position: absolute;
+      left: 15px;
+    }
+
+    .arrow {
+      position: absolute;
+      right: 20px;
+
+      @include transition ($MainTransition);
+    }
+
+    .content {
+      opacity: 0;
+      height: 100%; width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      margin-left: 10px;
+
+      color: white;
+      font: {
+        family: $MainFont;
+        size: 14px;
+      }
+      @include transition ($MainTransitionR);
+    }
+  }
+
+
+  .homeBox {
+    height: 287px; width: 435px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+
+    background: rgba(11, 11, 11, 0.49);
+    color: #fff;
+
+    border: {
+      width: 5px;
+      style: solid;
+      image-source: -webkit-linear-gradient(
+                      to right,
+                      #b20a2c,
+                      #fff5a0
+      );
+      image-source: linear-gradient(
+                      130deg,
+                      rgba(254, 229, 166, 1),
+                      rgba(253, 176, 146, 1),
+                      rgb(199, 36, 36),
+                      rgb(219, 61, 40)
+      );
+      image-slice: 1;
+    }
+
+    header {
+      width: 70%;
+
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      font-weight: 700;
+      font-size: 20px;
+
+      img {
+        max-height: 65px;
+
+        margin-right: 20px;
+      }
+    }
+
+    section {
+      width: 70%;
+
+      display: flex;
+      align-items: center;
+
+      font-size: 12px;
+      font-family: "EudoxusSans-Light";
+
+      span {
+        width: auto;
+      }
+
+      .progress {
+        width: 100%; height: 30px;
+
+        position: relative;
+
+        background: #323232;
+
+        .progress-bar {
+          background: linear-gradient(230.56deg, #ABABAB -168.07%, #101010 138.42%);
+        }
+      }
+    }
+
+    footer {
+      width: 70%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        width: 300px;
+
+        position: relative;
+
+        background: transparent;
+        border: 1px solid #535353;
+        border-radius: 8px;
+        text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+
+        &:before {
+          content: "IP:";
+
+          position: absolute;
+          left: 15px;
+        }
+
+        &:hover {
+          border: 1px solid #fff;
+
+          span {
+            background: linear-gradient(
+                            70deg,
+                            rgba(254, 229, 166, 1),
+                            rgba(253, 176, 146, 1),
+                            rgb(199, 36, 36),
+                            rgb(219, 61, 40)
+            );
+            background: -webkit-linear-gradient(
+                            70deg,
+                            rgba(254, 229, 166, 1),
+                            rgba(253, 176, 146, 1),
+                            rgb(199, 36, 36),
+                            rgb(219, 61, 40)
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}

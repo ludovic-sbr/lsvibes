@@ -1,0 +1,45 @@
+.navbar-nav {
+  width: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .nav-item {
+    margin: 0 20px 0 20px;
+
+    .nav-link {
+      position: relative;
+
+      text-decoration: none;
+      color: #fff;
+      @include transition ($MainTransition);
+
+      &:before {
+        opacity: 0;
+        content: "";
+        height: 3px; width: 100%;
+        @include bgGradient ($NavBg);
+
+        position: absolute;
+        top: 75%;
+
+        border-radius: 10px;
+        @include transition ($MainTransition);
+      }
+
+      &:hover {
+        transform: translate(0, -3px);
+        -webkit-transform: translate(0, -3px);
+        -moz-transform: translate(0, -3px);
+        -ms-transform: translate(0, -3px);
+
+        &:before {
+          opacity: 1;
+
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import './abstracts/abstracts-dir';
+
+@import './settings';
+
+@import "components/preloader";
+
+@import 'components/header';
+
+@import 'components/home';
+
+@import 'components/login';
+
+@import 'components/register';
+@import 'components/register/accountConfirmation';
+
+@import "components/dashboard";

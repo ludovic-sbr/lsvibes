@@ -1,0 +1,63 @@
+@mixin transition ($transition) {
+    transition: $transition;
+    -webkit-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    -moz-transition: $transition;
+}
+
+@mixin transform ($transform) {
+    transform: $transform;
+    -webkit-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    -moz-transform: $transform;
+}
+
+@mixin filter ($filter) {
+    filter: $filter;
+    -webkit-filter: $filter;
+    -ms-filter: $filter;
+    -o-filter: $filter;
+    -moz-filter: $filter;
+}
+
+@mixin backdrop-filter ($filter) {
+    backdrop-filter: $filter;
+    -webkit-backdrop-filter: $filter;
+    -ms-backdrop-filter: $filter;
+    -o-backdrop-filter: $filter;
+    -moz-backdrop-filter: $filter;
+}
+
+@mixin text-fill-color ($text-fill-color) {
+    text-fill-color: $text-fill-color;
+    -webkit-text-fill-color: $text-fill-color;
+    -ms-text-fill-color: $text-fill-color;
+    -o-text-fill-color: $text-fill-color;
+    -moz-text-fill-color: $text-fill-color; 
+}
+
+@mixin bgGradient ($linear-gradient) {
+    background: $linear-gradient;
+    background: -webkit-$linear-gradient;
+    background: -ms-$linear-gradient;
+    background: -o-$linear-gradient;
+    background: -moz-$linear-gradient; 
+}
+
+@mixin imageGradient ($linear-gradient) {
+    image: $linear-gradient;
+    image: -webkit-$linear-gradient;
+    image: -ms-$linear-gradient;
+    image: -o-$linear-gradient;
+    image: -moz-$linear-gradient; 
+}
+
+@mixin bgClip ($bgClip) {
+    background-clip: $bgClip;
+    -webkit-background-clip: $bgClip;
+    -ms-background-clip: $bgClip;
+    -o-background-clip: $bgClip;
+    -moz-background-clip: $bgClip;
+}

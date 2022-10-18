@@ -1,0 +1,183 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DB_URL")
+}
+
+model bans {
+  id       Int     @id @default(autoincrement())
+  name     String? @db.VarChar(50)
+  license  String? @db.VarChar(50)
+  discord  String? @db.VarChar(50)
+  ip       String? @db.VarChar(50)
+  reason   String? @db.Text
+  expire   Int?
+  bannedby String  @default("LeBanhammer") @db.VarChar(255)
+
+  @@index([discord], map: "discord")
+  @@index([ip], map: "ip")
+  @@index([license], map: "license")
+}
+
+model characters {
+  id         Int       @id
+  charid     Int?
+  name       String?   @db.VarChar(50)
+  firstname  String?   @db.VarChar(50)
+  birthdate  DateTime? @db.Date
+  money      Int?
+  blackmoney Int?
+  bank       Int?
+  coords     String?   @db.VarChar(100)
+  model      String?   @db.VarChar(150)
+}
+
+model gloveboxitems {
+  id    Int     @default(autoincrement())
+  plate String  @id @db.VarChar(255)
+  items String? @db.LongText
+
+  @@index([id], map: "id")
+}
+
+model permissions {
+  id         Int    @id @default(autoincrement())
+  name       String @db.VarChar(255)
+  license    String @db.VarChar(255)
+  permission String @db.VarChar(255)
+
+  @@index([license], map: "license")
+}
+
+model player_contacts {
+  id        Int     @id @default(autoincrement())
+  citizenid String? @db.VarChar(50)
+  name      String? @db.VarChar(50)
+  number    String? @db.VarChar(50)
+  iban      String  @default("0") @db.VarChar(50)
+
+  @@index([citizenid], map: "citizenid")
+}
+
+model player_outfits {
+  id         Int     @id @default(autoincrement())
+  citizenid  String? @db.VarChar(50)
+  outfitname String  @db.VarChar(50)
+  model      String? @db.VarChar(50)
+  skin       String? @db.Text
+  outfitId   String  @db.VarChar(50)
+
+  @@index([citizenid], map: "citizenid")
+  @@index([outfitId], map: "outfitId")
+}
+
+model player_vehicles {
+  id              Int     @id @default(autoincrement())
+  license         String? @db.VarChar(50)
+  citizenid       String? @db.VarChar(50)
+  vehicle         String? @db.VarChar(50)
+  hash            String? @db.VarChar(50)
+  mods            String? @db.LongText
+  plate           String  @db.VarChar(50)
+  fakeplate       String? @db.VarChar(50)
+  garage          String? @db.VarChar(50)
+  fuel            Int?    @default(100)
+  engine          Float?  @default(1000) @db.Float
+  body            Float?  @default(1000) @db.Float
+  state           Int?    @default(1)
+  depotprice      Int     @default(0)
+  drivingdistance Int?
+  status          String? @db.Text
+  balance         Int     @default(0)
+  paymentamount   Int     @default(0)
+  paymentsleft    Int     @default(0)
+  financetime     Int     @default(0)
+
+  @@index([citizenid], map: "citizenid")
+  @@index([license], map: "license")
+  @@index([plate], map: "plate")
+}
+
+model players {
+  id           Int      @default(autoincrement())
+  citizenid    String   @id @db.VarChar(50)
+  cid          Int?
+  license      String   @db.VarChar(255)
+  name         String   @db.VarChar(255)
+  money        String   @db.Text
+  charinfo     String?  @db.Text
+  job          String   @db.Text
+  gang         String?  @db.Text
+  position     String   @db.Text
+  metadata     String   @db.Text
+  inventory    String?  @db.LongText
+  last_updated DateTime @default(now()) @db.Timestamp(0)
+
+  @@index([id], map: "id")
+  @@index([last_updated], map: "last_updated")
+  @@index([license], map: "license")
+}
+
+model playerskins {
+  id        Int    @id @default(autoincrement())
+  citizenid String @db.VarChar(255)
+  model     String @db.VarChar(255)
+  skin      String @db.Text
+  active    Int    @default(1) @db.TinyInt
+
+  @@index([active], map: "active")
+  @@index([citizenid], map: "citizenid")
+}
+
+model stashitems {
+  id    Int     @default(autoincrement())
+  stash String  @id @db.VarChar(255)
+  items String? @db.LongText
+
+  @@index([id], map: "id")
+}
+
+model trunkitems {
+  id    Int     @default(autoincrement())
+  plate String  @id @db.VarChar(255)
+  items String? @db.LongText
+
+  @@index([id], map: "id")
+}
+
+model users {
+  id              Int       @id @default(autoincrement())
+  username        String    @db.VarChar(50)
+  uid             String    @db.VarChar(255)
+  email           String    @db.VarChar(100)
+  pwd             String    @db.Text
+  lastip          String?   @db.VarChar(20)
+  lastco          BigInt?
+  adminLvl        Int       @default(0)
+  whitelistStatus Boolean   @default(false)
+  emailToken      String?   @db.VarChar(255)
+  passwordToken   String?   @db.VarChar(255)
+  isEmailVerified Boolean   @default(false)
+  newsletter      Boolean   @default(false)
+  discord         String?   @db.VarChar(20)
+  registryDate    DateTime? @default(now()) @db.Timestamp(0)
+  first           Boolean?  @default(true)
+  steam           String?   @db.VarChar(20)
+  fivem           String?   @db.VarChar(10)
+  live            String?   @db.VarChar(20)
+  xbl             String?   @db.VarChar(20)
+  license         String?   @db.VarChar(50)
+  secure_auth     Boolean?  @default(false)
+  secure_code     String?   @db.VarChar(6)
+}
+
+model vehicules {
+  id        Int    @id @default(autoincrement())
+  spawnName String @default("0") @db.VarChar(50)
+  plate     String @default("0") @db.VarChar(50)
+  customes  String @default("0") @db.VarChar(50)
+  owner     Int    @default(0)
+}
